@@ -9,6 +9,5 @@ dataset is shape of (256, 256, 256, 6) numpy file
 <br>
 dataset is human labeled by me
 
-<br>
 got too many times to convert numpy into dataframe
 so i made this for my study
