@@ -2,8 +2,10 @@ import multiprocessing
 import pandas as pd
 import numpy as np
 
-np_rgb = np.load('rgb_220208.npy')
+# dataset load, numpy type
+np_rgb = np.load('rgb_weights.npy')
 
+# function that change 4-dimensional array into dataframe, pandas
 def to_df(count):
     tmp = pd.DataFrame()
     print(count)
@@ -23,6 +25,7 @@ def to_df(count):
 
     return tmp
 
+# function that multi processing to_df() 
 def parallelize_dataframe():
     pool = multiprocessing.Pool(processes=12)
     rgb = pd.concat(pool.map(to_df, range(1024)))
